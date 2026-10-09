@@ -40,6 +40,7 @@ def approximate_pi(n):
     plt.scatter(x_in, y_in, color = 'red', s=1)
     plt.scatter(x_out, y_out, color = 'blue', s=1) 
     plt.savefig(f"pi_{n}.png")
+    plt.gca().set_aspect('equal')
     plt.show()
     plt.close()
     print('Värdet av n:\n', n, 'Approximerat värdet av pi:\n', approx_pi)

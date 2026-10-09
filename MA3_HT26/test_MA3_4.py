@@ -6,7 +6,7 @@ from MA3 import *
 class Test(unittest.TestCase):
 
     def test_sphere_volume_parallel(self):
-        n = 1000000
+        n = 20000000
         d = 11
         np = 2
         start = pc()
@@ -19,7 +19,7 @@ class Test(unittest.TestCase):
         print(app_vol)
         stop = pc()
         par = stop - start
-
+        print(seq, par)
         self.assertLess(1.6, app_vol)
         self.assertLess(app_vol, 2.2)
         self.assertLess(par, seq)
